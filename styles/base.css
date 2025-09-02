@@ -1,0 +1,73 @@
+:root {
+    --primary-color: #0c7063;
+    --secondary-color: #0c4370;
+    --accent-color: #f19345;
+    --text-color1: #000000;
+    --text-color2: #ffffff;
+    --font-family: Arial, sans-serif;
+}
+
+/* GENERAL */
+body {
+    margin: 2px;
+    padding: 1px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    background-color: #f9f9f9;
+    color: var(--text-color1);
+}
+
+/* HEADER */
+header {
+    background-color: var(--secondary-color);
+    color: var(--text-color2);
+    text-align: center;
+    height: 90px;
+}
+header #course-title {
+    font-size: 35px;
+    font-weight: bold;
+}
+header nav {
+    margin-top: 10px;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100px;
+}
+header nav a {
+    color: var(--text-color2);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 50px;
+    background-color: var(--primary-color);
+    transition: background-color 0.2s;
+}
+header nav a:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color1);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color2);
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 30px;
+}
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
