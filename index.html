@@ -17,29 +17,38 @@
                 <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
                 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p27#p27" target="_blank">Favorite Scripture</a></li>
                 <li><a href="final-project/" target="_blank">Final Project</a></li>
-                <!-- <li><a href="https://github.com/diana-nereni-hernandez-rodriguez" target="_blank">GitHub</a></li>
-                <li><a href="https://www.byui.edu/" target="_blank">BYU–Idaho</a></li>
-                <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li> -->
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Your Full Name</h1>
-        <section class="card">
-            <h2>About Me</h2>
-            <img src="images/Profile.jpg" alt="Your photo">
-            <p>Write a short introduction about yourself here. This could include your background, interests, or goals for this class.</p>
-        </section>
-        <section class="card">
-            <h2>My Interests</h2>
-            <img src="images/interest.jpg" alt="An image related to your interest">
-            <p>Share some of your hobbies, passions, or what you enjoy learning about. Add details that make this section unique to you.
-            </p>
-        </section>
+    <main class="grid">
+        <aside class="box">
+            <section class="card">
+                <h2>About Me</h2>
+                <div class="aboutme">
+                    <p>My name is Diana Nereni Hernandez Rodriguez, and I am a student at BYU-Idaho. I was born and raised in Mexico, and I have a passion for web development and design. I am currently working on improving my skills in HTML, CSS, and JavaScript.</p>
+                    <img src="images/profile.webp" alt="My photo">
+                </div>
+                <h2>Mexico</h2>
+                <div class="mexico">
+                    <img src="images/mexico.jpg" alt="An image of Mexico">
+                    <p>Mexico is the country where I was born and raised. It has a rich culture and history, and I am proud to be from there. Mexico is a beautiful country with a rich culture and history. It is known for its delicious food, vibrant music, and stunning landscapes. I love sharing my heritage with others and exploring the diverse regions of Mexico.</p>
+                </div>
+            </section>
+            <section class="card">
+                <h2>web dev resources</h2>
+                <img src="images/interest.jpg" alt="An image related to your interest">
+                <p>Here are some resources that I find helpful for web development:</p>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> - Comprehensive resource for web developers.</li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> - Great for learning web technologies.</li>
+                    <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a> - Tips and tricks for CSS.</li>
+                </ul>
+            </section>
+        </aside>
     </main>
+
     <footer>
-        <p> &copy; <span id="currentyear"></span> | Diana Nereni Hernandez Rodriguez | Mexico
-        </p>
+        <p>&copy; <span id="currentyear"></span> | Diana Nereni Hernandez Rodriguez | Mexico</p>
         <p id="lastModified"></p>
     </footer>
 </body>

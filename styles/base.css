@@ -5,12 +5,13 @@
     --text-color1: #000000;
     --text-color2: #ffffff;
     --font-family: Arial, sans-serif;
+    --box-shadow: 2px 2px 8px rgb(155, 154, 154);
 }
 
 /* GENERAL */
 body {
-    margin: 2px;
-    padding: 1px;
+    margin: 0;
+    padding: 0;
     font-size: 16px;
     box-sizing: border-box;
     font-family: var(--font-family);
@@ -23,10 +24,10 @@ header {
     background-color: var(--secondary-color);
     color: var(--text-color2);
     text-align: center;
-    height: 90px;
+    padding: 20px;
 }
 header #course-title {
-    font-size: 35px;
+    font-size: 32px;
     font-weight: bold;
 }
 header nav {
@@ -37,14 +38,19 @@ header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 100px;
+    padding: 0;
+    margin: 0;
+}
+header nav li {
+    margin: 0 5px;
 }
 header nav a {
     color: var(--text-color2);
     text-decoration: none;
-    font-size: 20px;
-    padding: 10px 50px;
+    font-size: 18px;
+    padding: 8px 20px;
     background-color: var(--primary-color);
+    border-radius: 5px;
     transition: background-color 0.2s;
 }
 header nav a:hover {
@@ -70,4 +76,63 @@ footer a {
 }
 footer a:hover {
     text-decoration: underline;
+}
+
+/* MAIN */
+img {
+    max-width: 100%;
+    height: 100px;
+    display: block;
+    margin: 2px auto;
+}
+.grid {
+    align-items: center;
+    display: grid;
+    gap: 20px;
+    min-width: 400px;
+    grid-template-columns: 50fr 5fr;
+}
+
+/* TÍTULOS */
+h2 {
+    width: 450px;
+    color: var(--text-color2);
+    background-color: var(--secondary-color);
+    margin: 10px 10px;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* ASIDE */
+aside.box {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1px;
+    justify-items: center;
+}
+aside.box .card {
+    border-radius: 10px;
+    max-width: 650px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+aside.box .card img {
+    margin: 10px auto;
+    border-radius: 8px;
+}
+aside.box .card p {
+    text-align: justify;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* CONTENEDOR ABOUT ME MEXICO */
+div.aboutme, div.mexico {
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
