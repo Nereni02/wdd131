@@ -16,10 +16,10 @@ hamburgerBtn.innerHTML = "☰";
 document.querySelector("header").insertBefore(hamburgerBtn, nav);
 
 hamburgerBtn.addEventListener("click", () => {
-  nav.classList.toggle("show");
-  if (hamburgerBtn.innerHTML === "☰") {
-    hamburgerBtn.innerHTML = "✖";
-  } else {
-    hamburgerBtn.innerHTML = "☰";
-  }
+    nav.classList.toggle("show");
+    if (hamburgerBtn.innerHTML === "☰") {
+        hamburgerBtn.innerHTML = "✖";
+    } else {
+        hamburgerBtn.innerHTML = "☰";
+    }
 });
