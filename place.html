@@ -33,23 +33,26 @@
             <!-- Hero Section -->
             <section class="hero">
                 <h2>Explore Stunning Landscapes</h2>
-                <img src="images/place-large.jpg" srcset="
-                images/place-small.jpg 600w,
-                images/place-medium.jpg 1000w,
-                images/place-large.jpg 1600w"
-                sizes="(max-width: 600px) 100vw,
-                (max-width: 1000px) 80vw,
-                1600px"
-                alt="Scenic view of the place">
-            </section>
+                <picture>
+                    <source srcset=" images/place-small.webp 600w, images/place-medium.webp 1000w, images/place-large.webp 1600w"
+                    sizes="(max-width: 600px) 100vw, (max-width: 1000px) 80vw, 1600px"
+                    type="image/webp">
+                    <source srcset=" images/place-small.jpg 600w, images/place-medium.jpg 1000w, images/place-large.jpg 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 80vw, 1600px"type="image/jpeg">
+                    <img src="images/place-large.jpg" alt="Scenic view of the place">
+            </picture>
             
             <!-- Weather Section -->
             <section class="weather">
                 <h2>Weather</h2>
-                <img class="mobile-icon" src="images/weather-icon.svg" alt="Weather icon">
-                <p>Currently: 5°C, Wind 15 km/h</p>
-                <p>Windchill: <span id="windchill"></span></p>
-            </section>
+                <picture>
+                    <source srcset=" images/place-small.webp 600w, images/place-medium.webp 1000w, images/place-large.webp 1600w"
+                    sizes="(max-width: 600px) 100vw, (max-width: 1000px) 80vw, 1600px"
+                    type="image/webp">
+                    <source srcset=" images/place-small.jpg 600w, images/place-medium.jpg 1000w, images/place-large.jpg 1600w"
+                    sizes="(max-width: 600px) 100vw, (max-width: 1000px) 80vw, 1600px"
+                    type="image/jpeg">
+                    <img src="images/place-large.jpg" alt="Scenic view of the place">
+                </picture>
 
             <!-- Content Sections -->
             <section class="content">
