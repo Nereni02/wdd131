@@ -23,9 +23,9 @@
             <h1>Discover This Amazing Place</h1>
             <nav>
                 <ul>
-                    <li><a href="#section1">Home</a></li>
-                    <li><a href="#section2">Gallery</a></li>
-                    <li><a href="#section3">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
         </header>
@@ -33,16 +33,18 @@
         <main>
             <!-- Hero Section -->
             <section class="hero">
+                <h2>Explore Stunning Landscapes</h2>
                 <img src="images/place-large.jpg" srcset="
-                    images/place-small.jpg 600w,
-                    images/place-medium.jpg 1000w,
-                    images/place-large.jpg 1600w"
+                images/place-small.jpg 600w,
+                images/place-medium.jpg 1000w,
+                images/place-large.jpg 1600w"
                 sizes="(max-width: 600px) 100vw,
-                       (max-width: 1000px) 80vw,
-               1600px"
-               alt="Scenic view of the place">
+                (max-width: 1000px) 80vw,
+                1600px"
+                alt="Scenic view of the place">
             </section>
-
+            
+            <!-- Weather Section -->
             <section class="weather">
                 <h2>Weather</h2>
                 <img class="mobile-icon" src="images/weather-icon.svg" alt="Weather icon">
@@ -58,10 +60,11 @@
             </section>
 
         </main>
+        <footer>
+            <p>&copy; <span id="year"></span> My Travel Page</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </footer>    
     </body>
-    <footer>
-        <p>&copy; <span id="year"></span> My Travel Page</p>
-        <p>Last Modified: <span id="last-modified"></span></p>
-    </footer>
+
 </html>
         
