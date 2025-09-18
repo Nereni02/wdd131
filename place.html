@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Country Page</title>
+        <meta name="description" content="Country Page for WDD 131 – Dynamic Web Fundamentals | Diana Nereni Hernandez Rodriguez | Course assignments, projects, and web development practice.">
+        <meta name="author" content="Diana Nereni Hernandez Rodriguez">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles/place.css">
+
+        <!-- JavaScript -->
+        <script src="scripts/place.js" defer></script>
+
+    </head>
+    <body>
+        <header>
+            <h1>Discover This Amazing Place</h1>
+            <nav>
+                <ul>
+                    <li><a href="#section1">Home</a></li>
+                    <li><a href="#section2">Gallery</a></li>
+                    <li><a href="#section3">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <img src="images/place-large.jpg" srcset="
+                    images/place-small.jpg 600w,
+                    images/place-medium.jpg 1000w,
+                    images/place-large.jpg 1600w"
+                sizes="(max-width: 600px) 100vw,
+                       (max-width: 1000px) 80vw,
+               1600px"
+               alt="Scenic view of the place">
+            </section>
+
+            <section class="weather">
+                <h2>Weather</h2>
+                <img class="mobile-icon" src="images/weather-icon.svg" alt="Weather icon">
+                <p>Currently: 5°C, Wind 15 km/h</p>
+                <p>Windchill: <span id="windchill"></span></p>
+            </section>
+
+            <!-- Content Sections -->
+            <section class="content">
+                <h2>Why Visit?</h2>
+                <p>This destination offers breathtaking landscapes, rich culture, and countless adventures. Perfect for travelers seeking both relaxation and exploration.
+                </p>
+            </section>
+
+        </main>
+    </body>
+    <footer>
+        <p>&copy; <span id="year"></span> My Travel Page</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</html>
+        
