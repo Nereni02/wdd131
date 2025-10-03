@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Plan — Valle Verde Community Garden</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Color scheme (used throughout this document) */
+    :root{
+      --primary: #0e7579; /* deep green — headings, primary buttons, accents */
+      --accent:  #ec794b; /* warm gold — CTAs, highlights */
+      --bg:      #F7FAF8; /* page background */
+      --muted:   #6c737e; /* body text */
+      --card:    #FFFFFF; /* panel background */
+
+      --heading-font: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      --body-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    /* Basic page styles that demonstrate the chosen color & typography */
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family:var(--body-font);
+      background:var(--bg);
+      color:var(--muted);
+      line-height:1.45;
+      padding:2rem;
+    }
+    header{display:flex;gap:1rem;align-items:center;margin-bottom:1.25rem}
+    .logo{width:64px;height:64px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:linear-gradient(135deg,var(--primary),#2bb673);box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+    .logo svg{width:40px;height:40px;display:block}
+    h1{font-family:var(--heading-font);font-weight:700;margin:0;color:var(--primary)}
+    .tagline{margin:0;color:var(--muted)}
+
+    main{max-width:1000px;margin-top:1rem}
+    section{background:var(--card);padding:1rem 1.25rem;border-radius:10px;box-shadow:0 1px 0 rgba(15,23,42,0.03);margin-bottom:1rem}
+    h2{font-family:var(--heading-font);color:var(--primary);margin-top:0}
+    .swatches{display:flex;gap:1rem;align-items:center}
+    .swatch{width:72px;height:48px;border-radius:6px;box-shadow:inset 0 -2px 0 rgba(0,0,0,0.06);display:flex;align-items:flex-end;justify-content:center;padding:6px;color:#073; font-weight:600}
+    .swatch .label{background:rgba(255,255,255,0.9);padding:2px 6px;border-radius:4px;font-size:0.72rem;color:#1a202c}
+    pre{background:#f3f4f6;padding:0.75rem;border-radius:6px;overflow:auto}
+    .color-row{display:flex;gap:1rem;align-items:center}
+
+    /* Typography demo */
+    .type-sample .display{font-family:var(--heading-font);font-size:1.25rem}
+    .type-sample p{margin:0.25rem 0}
+
+    /* Wireframe visuals */
+    .wireframes{display:flex;gap:1rem;flex-wrap:wrap}
+    .frame{flex:1 1 320px;border:2px dashed rgba(0,0,0,0.06);padding:0.75rem;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.6),transparent)}
+    .frame svg{width:100%;height:auto}
+
+    footer{font-size:0.85rem;color:var(--muted);margin-top:1rem}
+    a{color:var(--primary);text-decoration:none}
+    .accent{color:var(--accent);font-weight:600}
+
+    /* Responsive note for this document */
+    @media (max-width:600px){body{padding:1rem}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo" aria-hidden="true">
+      <!-- simple leaf logo (inline SVG) -->
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M3 21c8-8 9-12 18-18-6 9-9 10-18 18z" fill="#fff" opacity="0.08"/>
+        <path d="M12 2c4 0 8 4 8 8 0 6-6 10-10 12C7 18 4 8 12 2z" fill="white" opacity="0.14"/>
+        <path d="M7 11c2-2 6-3 9-1" stroke="#ffffff" stroke-opacity="0.9" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div>
+      <h1>Valle Verde Community Garden</h1>
+      <p class="tagline">A neighborhood resource for growing, learning, and community green-space activities.</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- Site Name -->
+    <section id="site-name">
+      <h2>Site Name</h2>
+      <p><strong>Valle Verde Community Garden</strong> — This name identifies a local community garden focused on sustainable growing practices and neighborhood activities. It communicates place (Valle Verde) and the activity (Community Garden).</p>
+      <p><strong>Why chosen:</strong> the name is concise, memorable, and signals both location and purpose. It fits well for a student web project that showcases localized content, events, and membership forms.</p>
+      <p><strong>Optional domain availability:</strong> <em>valleverdegarden.org</em> (check availability before purchase — not required for class)</p>
+    </section>
+
+    <!-- Site Purpose -->
+    <section id="site-purpose">
+      <h2>Site Purpose</h2>
+      <p>The site provides an informational hub and community portal. Primary features include:</p>
+      <ul>
+        <li>Information about plots, membership, and volunteer opportunities.</li>
+        <li>Guides for seasonal planting and sustainable gardening practices.</li>
+        <li>A calendar of workshops and local events with sign-up forms.</li>
+        <li>A gallery of community projects and success stories.</li>
+      </ul>
+      <p>Scope: local (neighborhood), educational, and community-organizing. The site will prioritize clear access to contact and joining information.</p>
+    </section>
+
+    <!-- Scenarios -->
+    <section id="scenarios">
+      <h2>Scenarios (user questions)</h2>
+      <p>Use-case questions from typical visitors — these guide content and navigation decisions.</p>
+      <ol>
+        <li><strong>How do I sign up for a planting plot and what are the costs?</strong> — The site must include a clear membership/join page with a form and FAQs.</li>
+        <li><strong>When is the next community workshop on composting?</strong> — The site needs a calendar/Events page with RSVP and details.</li>
+        <li><strong>What vegetables grow best in our local microclimate?</strong> — Provide seasonal planting guides and a resources page.</li>
+      </ol>
+    </section>
+
+    <!-- Color Schema -->
+    <section id="color-schema">
+      <h2>Color Schema</h2>
+      <p>Two primary colors selected and their planned usage:</p>
+      <div class="color-row">
+        <div class="swatches" aria-hidden="true">
+          <div class="swatch" style="background:var(--primary)"><span class="label">#2F855A</span></div>
+          <div class="swatch" style="background:var(--accent)"><span class="label">#ECC94B</span></div>
+        </div>
+        <div>
+          <ul>
+            <li><strong>Primary (&lt;-- used on this document):</strong> <span class="accent">#2F855A</span> — headings, primary buttons, and key accents.</li>
+            <li><strong>Accent:</strong> <span class="accent">#ECC94B</span> — call-to-action highlights, badges, and hover states.</li>
+            <li><strong>Neutral row:</strong> body text uses a muted gray; cards use white; page background uses a very light green tint for warmth.</li>
+          </ul>
+        </div>
+      </div>
+      <p>Accessibility note: chosen contrast should be verified on key elements (buttons, headings over images) using a contrast checker.</p>
+    </section>
+
+    <!-- Typography -->
+    <section id="typography">
+      <h2>Typography</h2>
+      <p>Selected font family choices (1–3 fonts). Where each will be used:</p>
+      <ul>
+        <li><strong>Montserrat</strong> (headings, brand wordmark) — used for H1/H2/H3 to give a friendly but bold presence.</li>
+        <li><strong>Inter</strong> (body copy, forms, captions) — clean, highly readable for paragraph text and UI elements.</li>
+      </ul>
+      <div class="type-sample">
+        <p class="display">Heading example (Montserrat) — Valle Verde Community Garden</p>
+        <p>Body example (Inter) — This paragraph demonstrates the chosen body font and is used for readable long-form text, descriptions, and form labels.</p>
+      </div>
+    </section>
+
+    <!-- Wireframe -->
+    <section id="wireframe">
+      <h2>Wireframe — Home Page</h2>
+      <p>Two simplified wireframes that show content relationships (mobile and large-screen). These are schematic — real content will be substituted later.</p>
+      <div class="wireframes">
+        <figure class="frame" aria-label="Mobile wireframe">
+          <figcaption><strong>Mobile view</strong> (narrow)</figcaption>
+          <svg viewBox="0 0 360 640" role="img" aria-labelledby="mobileTitle">
+            <title id="mobileTitle">Mobile wireframe for Valle Verde</title>
+            <rect x="12" y="12" width="336" height="56" rx="6" fill="#ffffff" stroke="#e6eef0"/>
+            <text x="30" y="44" font-size="10" fill="#666">Header (logo + nav)</text>
+            <rect x="12" y="80" width="336" height="140" rx="6" fill="#ffffff" stroke="#e6eef0"/>
+            <text x="30" y="120" font-size="10" fill="#666">Hero (image / title / CTA)</text>
+            <rect x="12" y="230" width="160" height="90" rx="6" fill="#ffffff" stroke="#e6eef0"/>
+            <rect x="188" y="230" width="160" height="90" rx="6" fill="#ffffff" stroke="#e6eef0"/>
+            <text x="30" y="270" font-size="10" fill="#666">Cards: Events / News</text>
+            <rect x="12" y="330" width="336" height="160" rx="6" fill="#ffffff" stroke="#e6eef0"/>
+            <text x="30" y="360" font-size="10" fill="#666">Content: Seasonal guide / About</text>
+            <rect x="12" y="500" width="336" height="56" rx="6" fill="#ffffff" stroke="#e6eef0"/>
+            <text x="30" y="536" font-size="10" fill="#666">Footer (contact, links)</text>
+          </svg>
+        </figure>
+
+        <figure class="frame" aria-label="Desktop wireframe">
+          <figcaption><strong>Large / Desktop view</strong></figcaption>
+          <svg viewBox="0 0 1000 600" role="img" aria-labelledby="desktopTitle">
+            <title id="desktopTitle">Desktop wireframe for Valle Verde</title>
+            <rect x="16" y="16" width="968" height="84" rx="6" fill="#ffffff" stroke="#e6eef0"/>
+            <text x="40" y="56" font-size="12" fill="#666">Header (logo + primary nav + actions)</text>
+            <rect x="16" y="112" width="680" height="240" rx="6" fill="#ffffff" stroke="#e6eef0"/>
+            <rect x="708" y="112" width="276" height="240" rx="6" fill="#ffffff" stroke="#e6eef0"/>
+            <text x="40" y="160" font-size="12" fill="#666">Hero / Featured content (left) — Sidebar (events, CTA)</text>
+            <rect x="16" y="368" width="320" height="160" rx="6" fill="#ffffff" stroke="#e6eef0"/>
+            <rect x="348" y="368" width="320" height="160" rx="6" fill="#ffffff" stroke="#e6eef0"/>
+            <rect x="680" y="368" width="304" height="160" rx="6" fill="#ffffff" stroke="#e6eef0"/>
+            <text x="40" y="410" font-size="12" fill="#666">Panels: Latest news / Guides / Gallery</text>
+            <rect x="16" y="540" width="968" height="36" rx="6" fill="#ffffff" stroke="#e6eef0"/>
+            <text x="40" y="566" font-size="12" fill="#666">Footer</text>
+          </svg>
+        </figure>
+      </div>
+      <p>Notes: the mobile wireframe stacks content vertically; the desktop wireframe uses a wider hero + sidebar with multi-column content panels.</p>
+    </section>
+
+    <!-- Country/Place Page -->
+    <section id="country-place">
+      <h2>Country / Place Page</h2>
+      <p>Each project should include a Country/Place page (or a dedicated Local Info page) describing the region's climate, soil, and planting seasons. For Valle Verde the page will include:</p>
+      <ul>
+        <li>Local climate summary (growing zone, typical temperature range)</li>
+        <li>Recommended crops for each season and planting calendar</li>
+        <li>Maps and directions to the garden (embed or static map image)</li>
+        <li>Local resources and partner organizations</li>
+      </ul>
+    </section>
+
+    <!-- CSS notes -->
+    <section id="css">
+      <h2>CSS / Supporting files</h2>
+      <p>Files to include in the project directory:</p>
+      <ul>
+        <li><code>styles.css</code> — main stylesheet (responsive rules, variables, component styles)</li>
+        <li><code>utilities.css</code> (optional) — small utility classes for spacing and layout</li>
+        <li><code>images/</code> — logo, hero images, and gallery assets</li>
+      </ul>
+
+      <p>Example minimal snippet for <code>styles.css</code> (this document uses the same palette):</p>
+      <pre>/* styles.css (excerpt)
+:root{ --primary:#2F855A; --accent:#ECC94B; }
+body{ font-family:Inter,system-ui; background:var(--bg); color:var(--muted);} 
+h1,h2{ font-family:Montserrat,system-ui; color:var(--primary);} 
+.btn-primary{ background:var(--primary); color:white; padding:0.5rem 0.9rem; border-radius:6px; }</pre>
+    </section>
+
+    <!-- Testing -->
+    <section id="testing">
+      <h2>Testing & Self-check</h2>
+      <p>Evaluate and document test results on the project page. Use the following checklist:</p>
+      <ul>
+        <li>HTML validation (W3C validator) — structure and syntax checks.</li>
+        <li>Accessibility (axe, WAVE) — headings order, alt text, keyboard navigation.</li>
+        <li>Color contrast — ensure text/buttons meet WCAG AA contrast ratios.</li>
+        <li>SEO basics — meaningful title tags, meta description, semantic headings.</li>
+        <li>Performance — minimize large images, enable responsive image sizes, check Lighthouse score.</li>
+        <li>Cross-browser testing — test on desktop and mobile (Chrome, Firefox, Safari).</li>
+      </ul>
+      <p>At the end of the project, include short notes for each test item with links/screenshots showing fixes and results.</p>
+    </section>
+
+    <!-- Content Plan (brief) -->
+    <section id="content-plan">
+      <h2>Content Plan</h2>
+      <p>Pages to create and required assets:</p>
+      <ul>
+        <li>Home — hero, events, featured guides, quick join CTA.</li>
+        <li>About — mission, volunteer staff, history.</li>
+        <li>Join / Membership — form, rules, fees, plot availability.</li>
+        <li>Resources — seasonal guides, how-tos, downloads.</li>
+        <li>Events — calendar and RSVP forms.</li>
+        <li>Gallery — photos with captions and credits.</li>
+        <li>Contact — contact form, location, and social links.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Site plan created: 2025-10-03 • Document uses the selected color schema and typography. Add or change the site name, domain, or colors as needed for your project.</p>
+  </footer>
+</body>
+</html>
