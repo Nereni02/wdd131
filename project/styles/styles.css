@@ -1,0 +1,48 @@
+/* styles.css - layout and component styles (mobile-first) */
+
+/* Branding */
+.brand{display:flex; gap:0.5rem; align-items:center; text-decoration:none}
+.brand-title{font-family: Montserrat, sans-serif; margin:0; font-size:1.25rem; color:var(--green)}
+.brand-sub{font-size:0.85rem; margin:0; color:var(--muted)}
+
+/* Header */
+.site-header{background:transparent; padding:0.75rem 0; position:sticky; top:0; z-index:50}
+.site-nav ul{list-style:none; display:flex; gap:0.5rem; padding:0; margin:0}
+.site-nav a{padding:0.4rem 0.6rem; border-radius:8px}
+.site-nav a.active{background:rgba(47,133,90,0.08); color:var(--green)}
+
+/* Nav toggle (mobile) */
+.nav-toggle{background:transparent; border:1px solid #ccc; padding:0.25rem 0.5rem; border-radius:8px; display:inline-block}
+
+/* Hero */
+.hero{padding:1.25rem 0}
+.hero-grid{display:grid; grid-template-columns:1fr; gap:1rem; align-items:center}
+.hero-text h2{font-family: Montserrat, sans-serif; margin:0 0 0.5rem 0; font-size:1.5rem}
+.hero-text p{margin:0 0 0.75rem 0}
+.hero-image img{width:100%; border-radius:10px; display:block; object-fit:cover}
+
+/* Cards */
+.cards{display:grid; grid-template-columns:1fr; gap:1rem; margin-top:1rem}
+.card h3{font-family: Montserrat, sans-serif; margin-top:0}
+
+/* Newsletter */
+.newsletter{margin:1.25rem 0; display:block}
+
+/* Resources filters */
+.filters{display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem}
+
+/* Event card */
+.event{display:flex; gap:1rem; background:var(--card); padding:1rem; border-radius:10px; align-items:center; box-shadow:0 4px 10px rgba(0,0,0,0.04)}
+.event img{width:160px; height:100px; object-fit:cover; border-radius:8px}
+
+/* Responsive larger screens */
+@media(min-width:720px){
+  .hero-grid{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:repeat(3,1fr)}
+}
+
+@media(min-width:1024px){
+  .header-grid{align-items:center}
+  .nav-toggle{display:none}
+  .site-nav ul{gap:0.7rem}
+}
