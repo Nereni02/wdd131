@@ -1,115 +1,107 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Valle Verde Community Garden</title>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Valle Verde Community Garden</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="styles/bases.css">
+        <link rel="stylesheet" href="styles/styles.css">
+        <meta name="description" content="Valle Verde Community Garden — Information, events, and resources for community and sustainable gardening">
+    </head>
+    <body>
+        <header class="site-header" role="banner">
+            <div class="container header-grid">
+                <a href="index.html" class="brand" aria-label="Valle Verde Community Garden">
+                    <h1 class="brand-title">Valle Verde</h1>
+                    <p class="brand-sub">Community Garden</p>
+                </a>
+                <button id="nav-toggle" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">☰ <span class="sr-only"><Menu></Menu></span></button>
+                <nav id="site-nav" class="site-nav" role="navigation" aria-label="Navegación principal">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="join.html">Join</a></li>
+                        <li><a href="references.html">References</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="hero" aria-label="Hero: Valle Verde Community Garden">
+                <div class="container hero-grid">
+                    <div class="hero-text">
+                        <h2>A space to grow, learn, and gather</h2>
+                        <p>Valle Verde Community Garden is a local resource for neighbors interested in sustainable practices, workshops, and community involvement.</p>
+                        <p><a class="btn primary" href="join.html">Join today</a> <a class="btn outline" href="events.html">See events</a></p>
+                    </div>
+                    <div class="hero-image">
+                        <img src="images/hero.jpg" alt="Community garden with plots and people working" loading="lazy" width="800" height="500">
+                    </div>
+                </div>
+            </section>
+            <section class="intro container" aria-labelledby="about-title">
+                <h2 id="about-title">About the garden</h2>
+                <p>We offer plots, monthly workshops, volunteer events, and seasonal guides for any neighbor interested in learning to garden in community.</p>
+            </section>
+    
+            <section class="cards container" aria-label="Main sections">
+                <article class="card">
+                    <h3>Upcoming events</h3>
+                    <p>Workshops, composting days, and community meetings.</p>
+                    <p><a class="btn" href="events.html">View calendar</a></p>
+                </article>
+      
+                <article class="card">
+                    <h3>How to join</h3>
+                    <p>Information on plots, costs, and responsibilities.</p>
+                    <p><a class="btn" href="join.html">Join form</a></p>
+                </article>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles/bases.css">
-  <link rel="stylesheet" href="styles/styles.css">
-
-  <meta name="description" content="Valle Verde Community Garden — Información, eventos y recursos para jardinería comunitaria y sostenible.">
-</head>
-<body>
-  <header class="site-header" role="banner">
-    <div class="container header-grid">
-      <a href="index.html" class="brand" aria-label="Valle Verde Community Garden">
-        <h1 class="brand-title">Valle Verde</h1>
-        <p class="brand-sub">Community Garden</p>
-      </a>
-
-      <button id="nav-toggle" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">☰ <span class="sr-only">Menú</span></button>
-
-      <nav id="site-nav" class="site-nav" role="navigation" aria-label="Navegación principal">
-        <ul>
-          <li><a href="index.html" class="active">Inicio</a></li>
-          <li><a href="events.html">Eventos</a></li>
-          <li><a href="join.html">Unirse</a></li>
-          <li><a href="resources.html">Recursos</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" aria-label="Hero: Valle Verde Community Garden">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h2>Un espacio para crecer, aprender y reunirse</h2>
-          <p>Valle Verde Community Garden es un recurso local para vecinos interesados en prácticas sustentables, talleres y participación comunitaria.</p>
-          <p><a class="btn primary" href="join.html">Únete hoy</a> <a class="btn outline" href="events.html">Ver eventos</a></p>
-        </div>
-        <div class="hero-image">
-          <img src="images/hero.jpg" alt="Jardín comunitario con parcelas y gente trabajando" loading="lazy" width="800" height="500">
-        </div>
-      </div>
-    </section>
-
-    <section class="intro container" aria-labelledby="about-title">
-      <h2 id="about-title">Sobre el jardín</h2>
-      <p>Ofrecemos parcelas, talleres mensuales, eventos de voluntariado y guías estacionales para que cualquier vecino aprenda a cultivar en comunidad.</p>
-    </section>
-
-    <section class="cards container" aria-label="Secciones principales">
-      <article class="card">
-        <h3>Próximos eventos</h3>
-        <p>Workshops, jornadas de compostaje y reuniones comunitarias.</p>
-        <p><a class="btn" href="events.html">Ver calendario</a></p>
-      </article>
-
-      <article class="card">
-        <h3>Cómo unirse</h3>
-        <p>Información sobre parcelas, costos y responsabilidades.</p>
-        <p><a class="btn" href="join.html">Formulario de inscripción</a></p>
-      </article>
-
-      <article class="card">
-        <h3>Guías de plantación</h3>
-        <p>Recomendaciones por temporada para huertos urbanos.</p>
-        <p><a class="btn" href="resources.html">Explorar recursos</a></p>
-      </article>
-    </section>
-
-    <section class="newsletter container" aria-labelledby="newsletter-title">
-      <h2 id="newsletter-title">Mantente al tanto</h2>
-      <form id="newsletter-form" class="form-inline" novalidate>
-        <label for="newsletter-email" class="sr-only">Correo electrónico</label>
-        <input id="newsletter-email" type="email" name="email" placeholder="tu@correo.com" required aria-required="true">
-        <button class="btn primary" type="submit">Suscribirse</button>
-      </form>
-      <p id="newsletter-msg" aria-live="polite" class="muted"></p>
-    </section>
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-grid">
-      <div>
-        <h3>Valle Verde Community Garden</h3>
-        <p class="muted">Espacio comunitario local — Promoviendo prácticas sustentables</p>
-      </div>
-      <div>
-        <nav aria-label="Enlaces de pie de página">
-          <ul>
-            <li><a href="references.html">Referencias</a></li>
-            <li><a href="join.html">Unirse</a></li>
-            <li><a href="events.html">Eventos</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div>
-        <p class="muted">&copy; <span id="year"></span> Valle Verde Community Garden</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="scripts/main.js" defer></script>
-  <script src="scripts/events.js" defer></script>
-  <script src="scripts/join.js" defer></script>
-  <script src="scripts/resources.js" defer></script>
-</body>
+                <article class="card">
+                    <h3>Planting guides</h3>
+                    <p>Seasonal recommendations for urban gardens.</p>
+                    <p><a class="btn" href="resources.html">Explore resources</a></p>
+                </article>
+            </section>
+    
+            <section class="newsletter container" aria-labelledby="newsletter-title">
+                <h2 id="newsletter-title">Stay updated</h2>
+                <form id="newsletter-form" class="form-inline" novalidate>
+                    <label for="newsletter-email" class="sr-only">Email address</label>
+                    <input id="newsletter-email" type="email" name="email" placeholder="you@example.com" required aria-required="true">
+                    <button class="btn primary" type="submit">Subscribe</button>
+                </form>
+                <p id="newsletter-msg" aria-live="polite" class="muted"></p>
+            </section>
+        </main>
+        <footer class="site-footer" role="contentinfo">
+            <div class="container footer-grid">
+                <div>
+                    <h3>Valle Verde Community Garden</h3>
+                    <p class="muted">Local community space — Promoting sustainable practices</p>
+                </div>
+                <div>
+                    <nav aria-label="Footer links">
+                        <ul>
+                            <li><a href="references.html">References</a></li>
+                            <li><a href="join.html">Join</a></li>
+                            <li><a href="events.html">Events</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <p class="muted">&copy; <span id="year"></span> Valle Verde Community Garden</p>
+                </div>
+            </div>
+        </footer>
+        <script src="scripts/main.js" defer></script>
+        <script src="scripts/events.js" defer></script>
+        <script src="scripts/join.js" defer></script>
+        <script src="scripts/resources.js" defer></script>
+    </body>
 </html>
 

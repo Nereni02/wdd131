@@ -1,28 +1,20 @@
-/* join.js - manejo del formulario de inscripción (localStorage, validación y DOM updates) */
-
 const JOIN_KEY = 'vv_join_requests';
-
-/* Obtener solicitudes almacenadas */
 function getJoinRequests() {
   return JSON.parse(localStorage.getItem(JOIN_KEY) || '[]');
 }
 
-/* Guardar solicitud nueva */
 function addJoinRequest(request) {
   const list = getJoinRequests();
   list.push(request);
   localStorage.setItem(JOIN_KEY, JSON.stringify(list));
 }
 
-/* Validación simple (podrías ampliar) */
 function validateJoin(data) {
   if (!data.name || !data.email || !data.role) return false;
-  // email básica
   const re = /\S+@\S+\.\S+/;
   return re.test(data.email);
 }
 
-/* Manejar envío del formulario */
 function initJoinForm() {
   const form = document.getElementById('join-form');
   const confirm = document.getElementById('join-confirm');
@@ -41,13 +33,13 @@ function initJoinForm() {
     };
 
     if (!validateJoin(data)) {
-      confirm.textContent = 'Por favor completa los campos requeridos correctamente.';
+      confirm.textContent = 'Please fill in the required fields correctly.';
       confirm.className = 'muted';
       return;
     }
 
     addJoinRequest(data);
-    confirm.textContent = `Gracias, ${data.name}. Tu solicitud fue guardada. Te contactaremos por ${data.email}.`;
+    confirm.textContent = `Thank you, ${data.name}. Your request has been saved. We will contact you at ${data.email}.`;
     confirm.className = 'muted';
     form.reset();
   });
@@ -58,7 +50,6 @@ function initJoinForm() {
   });
 }
 
-/* Inicializador */
 document.addEventListener('DOMContentLoaded', () => {
   initJoinForm();
 });

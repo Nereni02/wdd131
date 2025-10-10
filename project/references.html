@@ -1,54 +1,48 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Recursos - Valle Verde Community Garden</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/bases.css">
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-grid">
-      <a href="index.html" class="brand"><h1 class="brand-title">Valle Verde</h1></a>
-      <button id="nav-toggle-4" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">☰</button>
-      <nav id="site-nav" class="site-nav" role="navigation">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="events.html">Eventos</a></li>
-          <li><a href="join.html">Unirse</a></li>
-          <li><a href="resources.html" class="active">Recursos</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <h2>Guías de plantación por temporada</h2>
-
-    <div class="filters">
-      <button class="btn" data-season="all">Todas</button>
-      <button class="btn" data-season="spring">Primavera</button>
-      <button class="btn" data-season="summer">Verano</button>
-      <button class="btn" data-season="fall">Otoño</button>
-      <button class="btn" data-season="winter">Invierno</button>
-    </div>
-
-    <section id="resources-list" class="grid">
-      <!-- Renderizado dinámico por scripts/resources.js -->
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><h3>Valle Verde</h3></div>
-      <div><nav aria-label="enlaces"><ul><li><a href="references.html">Referencias</a></li></ul></nav></div>
-      <div><p class="muted">&copy; <span id="year-4"></span></p></div>
-    </div>
-  </footer>
-
-  <script src="scripts/main.js" defer></script>
-  <script src="scripts/resources.js" defer></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Resources - Valle Verde Community Garden</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/bases.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-grid">
+        <a href="index.html" class="brand"><h1 class="brand-title">Valle Verde</h1></a>
+        <button id="nav-toggle-4" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">☰</button>
+        <nav id="site-nav" class="site-nav" role="navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="references.html" class="active">References</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <h2>Planting guides by season</h2>
+      <div class="filters">
+        <button class="btn" data-season="all">All</button>
+        <button class="btn" data-season="spring">Spring</button>
+        <button class="btn" data-season="summer">Summer</button>
+        <button class="btn" data-season="fall">Fall</button>
+        <button class="btn" data-season="winter">Winter</button>
+      </div>
+      <section id="resources-list" class="grid">
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div><h3>Valle Verde</h3></div>
+        <div><nav aria-label="enlaces"><ul><li><a href="references.html">References</a></li></ul></nav></div>
+        <div><p class="muted">&copy; <span id="year-4"></span></p></div>
+      </div>
+    </footer>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/resources.js" defer></script>
+  </body>
 </html>

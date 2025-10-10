@@ -1,6 +1,3 @@
-/* main.js - funciones comunes: nav toggle, footer year, newsletter handling */
-
-/* Toggle navigation for mobile (DOM interaction; events) */
 function initNavToggle() {
   const toggles = document.querySelectorAll('.nav-toggle');
   toggles.forEach(btn => {
@@ -13,14 +10,12 @@ function initNavToggle() {
   });
 }
 
-/* Colocar año en footer */
 function setFooterYears() {
   const years = document.querySelectorAll('[id^="year"]');
   const y = new Date().getFullYear();
   years.forEach(el => el.textContent = y);
 }
 
-/* Newsletter form (simple localStorage subscription) */
 function initNewsletter() {
   const form = document.getElementById('newsletter-form');
   const input = document.getElementById('newsletter-email');
@@ -31,25 +26,23 @@ function initNewsletter() {
     e.preventDefault();
     const email = input.value.trim();
     if (!email) {
-      msg.textContent = 'Por favor ingresa un correo válido.';
+      msg.textContent = 'Please enter a valid email address.';
       return;
     }
-    // Save to localStorage using an array of subscriptions
     const key = 'vv_newsletters';
     const existing = JSON.parse(localStorage.getItem(key) || '[]');
     // avoid duplicates
     if (existing.includes(email)) {
-      msg.textContent = 'Ya estás suscrito con este correo.';
+      msg.textContent = 'You are already subscribed with this email.';
       return;
     }
     existing.push(email);
     localStorage.setItem(key, JSON.stringify(existing));
-    msg.textContent = 'Gracias por suscribirte.';
+    msg.textContent = 'Thank you for subscribing.';
     input.value = '';
   });
 }
 
-/* Inicialización general */
 document.addEventListener('DOMContentLoaded', () => {
   initNavToggle();
   setFooterYears();

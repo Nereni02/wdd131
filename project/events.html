@@ -1,62 +1,57 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Eventos - Valle Verde Community Garden</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/bases.css">
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-grid">
-      <a href="index.html" class="brand">
-        <h1 class="brand-title">Valle Verde</h1><p class="brand-sub">Community Garden</p>
-      </a>
-      <button id="nav-toggle-2" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">☰ <span class="sr-only">Menú</span></button>
-      <nav id="site-nav" class="site-nav" role="navigation">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="events.html" class="active">Eventos</a></li>
-          <li><a href="join.html">Unirse</a></li>
-          <li><a href="resources.html">Recursos</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <h2>Próximos talleres y eventos</h2>
-    <p class="muted">Regístrate para participar. Tus inscripciones se guardan localmente en tu navegador.</p>
-
-    <section id="event-list" aria-live="polite">
-      <!-- Eventos renderizados por scripts/events.js -->
-    </section>
-
-    <section id="past-toggle" class="container">
-      <button id="show-past" class="btn outline">Mostrar eventos pasados</button>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>Valle Verde Community Garden</h3>
-      </div>
-      <div>
-        <nav aria-label="Enlaces de pie de página">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Events - Valle Verde Community Garden</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/bases.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-grid">
+        <a href="index.html" class="brand">
+          <h1 class="brand-title">Valle Verde</h1>
+          <p class="brand-sub">Community Garden</p>
+        </a>
+        <button id="nav-toggle-2" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">☰ <span class="sr-only">Home</span></button>
+        <nav id="site-nav" class="site-nav" role="navigation">
           <ul>
-            <li><a href="references.html">Referencias</a></li>
-            <li><a href="join.html">Unirse</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html" class="active">Events</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="references.html">References</a></li>
           </ul>
         </nav>
       </div>
-      <div><p class="muted">&copy; <span id="year-2"></span> Valle Verde</p></div>
-    </div>
-  </footer>
-
-  <script src="scripts/main.js" defer></script>
-  <script src="scripts/events.js" defer></script>
-</body>
+    </header>
+    <main class="container">
+      <h2>Upcoming workshops and events</h2>
+      <p class="muted">Register to participate. Your registrations are saved locally in your browser.</p>
+      <section id="event-list" aria-live="polite">
+      </section>
+      <section id="past-toggle" class="container">
+        <button id="show-past" class="btn outline">Show past events</button>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Valle Verde Community Garden</h3>
+        </div>
+        <div>
+          <nav aria-label="Enlaces de pie de página">
+            <ul>
+              <li><a href="references.html">References</a></li>
+              <li><a href="join.html">Join</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div><p class="muted">&copy; <span id="year-2"></span> Valle Verde</p></div>
+      </div>
+    </footer>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/events.js" defer></script>
+  </body>
 </html>

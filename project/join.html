@@ -1,76 +1,67 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Unirse - Valle Verde Community Garden</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/bases.css">
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-grid">
-      <a href="index.html" class="brand"><h1 class="brand-title">Valle Verde</h1></a>
-      <button id="nav-toggle-3" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">☰</button>
-      <nav id="site-nav" class="site-nav" role="navigation">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="events.html">Eventos</a></li>
-          <li><a href="join.html" class="active">Unirse</a></li>
-          <li><a href="resources.html">Recursos</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <h2>Unirse al jardín</h2>
-    <p>Rellena el formulario para solicitar una parcela o ser voluntario.</p>
-
-    <form id="join-form" class="form-grid" novalidate>
-      <fieldset>
-        <legend>Información personal</legend>
-
-        <label for="name">Nombre completo</label>
-        <input id="name" name="name" type="text" required aria-required="true" placeholder="Nombre completo">
-
-        <label for="email">Correo electrónico</label>
-        <input id="email" name="email" type="email" required placeholder="tu@correo.com">
-
-        <label for="phone">Teléfono (opcional)</label>
-        <input id="phone" name="phone" type="tel" pattern="[0-9 +()-]{7,20}" placeholder="+52 1 55...">
-
-        <label for="role">Interés</label>
-        <select id="role" name="role" required>
-          <option value="">-- elige --</option>
-          <option value="plot">Parcela de cultivo</option>
-          <option value="volunteer">Voluntariado</option>
-          <option value="workshop">Asistir a talleres</option>
-        </select>
-
-        <label for="comments">Comentarios / experiencia</label>
-        <textarea id="comments" name="comments" rows="4" placeholder="¿Has trabajado en huertos antes?"></textarea>
-
-        <div class="form-actions">
-          <button class="btn primary" type="submit">Enviar solicitud</button>
-          <button id="clear-btn" class="btn outline" type="button">Borrar</button>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Join - Valle Verde Community Garden</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/bases.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-grid">
+        <a href="index.html" class="brand"><h1 class="brand-title">Valle Verde</h1></a>
+        <button id="nav-toggle-3" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">☰</button>
+        <nav id="site-nav" class="site-nav" role="navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="join.html" class="active">Join</a></li>
+            <li><a href="references.html">References</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <h2>Join the garden</h2>
+      <p>Fill out the form to apply for a plot or volunteer.</p>
+      <form id="join-form" class="form-grid" novalidate>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required aria-required="true" placeholder="Full Name">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="phone" type="tel" pattern="[0-9 +()-]{7,20}" placeholder="+52 1 55...">
+          <label for="role">Interest</label>
+          <select id="role" name="role" required>
+            <option value="">-- choose --</option>
+            <option value="plot">Cultivation Plot</option>
+            <option value="volunteer">Volunteering</option>
+            <option value="workshop">Attending Workshops</option>
+          </select>
+          <label for="comments">Comments / Experience</label>
+          <textarea id="comments" name="comments" rows="4" placeholder="Have you worked in gardens before?"></textarea>
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Submit Application</button>
+            <button id="clear-btn" class="btn outline" type="button">Clear</button>
+          </div>
+        </fieldset>
+      </form>
+      <div id="join-confirm" aria-live="polite"></div>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div><h3>Valle Verde</h3></div>
+        <div><nav aria-label="footer-links"><ul><li><a href="references.html">References</a></li></ul></nav></div>
+        <div>
+          <p class="muted">&copy; <span id="year-3"></span></p>
         </div>
-      </fieldset>
-    </form>
-
-    <div id="join-confirm" aria-live="polite"></div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><h3>Valle Verde</h3></div>
-      <div><nav aria-label="footer-links"><ul><li><a href="references.html">Referencias</a></li></ul></nav></div>
-      <div><p class="muted">&copy; <span id="year-3"></span></p></div>
-    </div>
-  </footer>
-
-  <script src="scripts/main.js" defer></script>
-  <script src="scripts/join.js" defer></script>
-</body>
+      </div>
+    </footer>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+  </body>
 </html>
